@@ -108,7 +108,7 @@ interface Particle {
       <!-- PRODUCT IMAGE MOCKUP DISPLAY -->
       <div class="flex items-center justify-center relative transition-all duration-300 select-none">
         <img src="assets/images/Kecerdasan Terfokus - White.png" class="w-full max-w-[520px] h-auto object-contain dark:hidden transition-all duration-300" alt="Kecerdasan Terfokus">
-        <img src="assets/images/Kecerdasan Terfokus -  Black.png" class="w-full max-w-[520px] h-auto object-contain hidden dark:block transition-all duration-300" alt="Kecerdasan Terfokus">
+        <img src="assets/images/Kecerdasan Terfokus -  Black.svg" class="w-full max-w-[520px] h-auto object-contain hidden dark:block transition-all duration-300" alt="Kecerdasan Terfokus">
       </div>
     </section>
 
