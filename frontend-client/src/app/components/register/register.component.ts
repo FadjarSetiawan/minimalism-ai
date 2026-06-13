@@ -12,8 +12,9 @@ import { AuthService } from '../../services/auth.service';
     <div class="min-h-[80vh] flex items-center justify-center px-6 transition-colors duration-300">
       <div class="w-full max-w-sm">
         <div class="text-center mb-8 select-none">
-          <div class="w-10 h-10 bg-primary dark:bg-zinc-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-            <span class="text-white dark:text-black text-sm font-bold">M</span>
+          <div class="flex justify-center mb-4">
+            <img src="assets/images/Logo Brand Minimalism black.png" class="block dark:hidden h-8 w-auto object-contain" alt="Minimalism AI Logo">
+            <img src="assets/images/Logo Brand Minimalism white.png" class="hidden dark:block h-8 w-auto object-contain" alt="Minimalism AI Logo">
           </div>
           <h1 class="text-[24px] font-semibold text-primary dark:text-zinc-50 mb-1">Buat akun Anda</h1>
           <p class="text-[14px] text-secondary dark:text-zinc-400 font-sans">Mulai gunakan setiap model AI secara gratis</p>

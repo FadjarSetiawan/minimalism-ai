@@ -16,11 +16,9 @@ import { ThemeService } from './services/theme.service';
         <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
           
           <!-- Logo -->
-          <a routerLink="/" class="flex items-center gap-2.5 no-underline">
-            <div class="w-7 h-7 bg-primary dark:bg-zinc-100 rounded-xl flex items-center justify-center">
-              <span class="text-white dark:text-black text-xs font-bold">M</span>
-            </div>
-            <span class="text-[15px] font-semibold text-primary dark:text-zinc-50 tracking-tight">Minimalism AI</span>
+          <a routerLink="/" class="flex items-center no-underline">
+            <img src="assets/images/Logo Brand Minimalism black.png" class="block dark:hidden h-6 w-auto object-contain" alt="Minimalism AI">
+            <img src="assets/images/Logo Brand Minimalism white.png" class="hidden dark:block h-6 w-auto object-contain" alt="Minimalism AI">
           </a>
 
           <!-- Navigation -->

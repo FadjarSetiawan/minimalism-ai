@@ -51,9 +51,9 @@ interface WireflowNode {
         
         <div class="flex-1 flex flex-col min-h-0">
           <!-- Sleek branding header -->
-          <div *ngIf="!sidebarCollapsed" class="p-5 flex items-center gap-2.5">
-            <div class="w-7 h-7 rounded-lg bg-zinc-900 dark:bg-zinc-100 flex items-center justify-center font-bold text-white dark:text-black text-sm shadow-sm">M</div>
-            <span class="text-sm font-extrabold tracking-wider text-zinc-900 dark:text-white uppercase">Minimalism AI</span>
+          <div *ngIf="!sidebarCollapsed" class="p-5 flex items-center">
+            <img src="assets/images/Logo Brand Minimalism black.png" class="block dark:hidden h-5 w-auto object-contain" alt="Minimalism AI Logo">
+            <img src="assets/images/Logo Brand Minimalism white.png" class="hidden dark:block h-5 w-auto object-contain" alt="Minimalism AI Logo">
           </div>
 
           <div *ngIf="sidebarCollapsed" class="p-5 flex justify-center">
@@ -199,12 +199,10 @@ interface WireflowNode {
             <!-- BLANK STATE: Clean Minimalist Chat Area -->
             <div class="h-full flex flex-col items-center justify-center p-6 select-none" *ngIf="messages.length === 0">
               <div class="text-center max-w-lg w-full mb-8">
-                <div class="w-16 h-16 rounded-3xl flex items-center justify-center mx-auto mb-6 bg-white dark:bg-[#101012] shadow-sm border border-zinc-200/80 dark:border-zinc-800/80">
-                  <svg class="w-8 h-8 text-zinc-800 dark:text-zinc-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                  </svg>
+                <div class="flex justify-center mb-6">
+                  <img src="assets/images/Logo Brand Minimalism black.png" class="block dark:hidden h-10 w-auto object-contain" alt="Minimalism AI Logo">
+                  <img src="assets/images/Logo Brand Minimalism white.png" class="hidden dark:block h-10 w-auto object-contain" alt="Minimalism AI Logo">
                 </div>
-                <h1 class="text-[26px] font-extrabold text-zinc-900 dark:text-zinc-50 tracking-wider uppercase mb-2">MINIMALISM AI</h1>
                 <p class="text-[13.5px] text-zinc-500 dark:text-zinc-400 leading-relaxed font-sans max-w-md mx-auto">
                   Bagaimana saya bisa membantu Anda hari ini? Kirim pesan untuk memulai.
                 </p>
