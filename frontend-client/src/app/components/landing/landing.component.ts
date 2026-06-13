@@ -105,44 +105,10 @@ interface Particle {
         </div>
       </div>
 
-      <!-- INTERACTIVE SVG DIAGRAM -->
+      <!-- PRODUCT IMAGE MOCKUP DISPLAY -->
       <div class="flex items-center justify-center bg-surface dark:bg-[#151518] rounded-3xl border border-border dark:border-zinc-800 p-8 relative h-[380px] overflow-hidden transition-all duration-300">
-        <svg class="w-full h-full" viewBox="0 0 400 400">
-          <!-- Connection lines -->
-          <line x1="200" y1="200" x2="80" y2="100" stroke="#E5E5E7" stroke-width="2" [attr.stroke]="activeNode === 'flash' ? '#38bdf8' : (documentClassList().contains('dark') ? '#2e2e33' : '#E5E5E7')" class="transition-all duration-300"/>
-          <line x1="200" y1="200" x2="320" y2="100" stroke="#E5E5E7" stroke-width="2" [attr.stroke]="activeNode === 'think' ? '#38bdf8' : (documentClassList().contains('dark') ? '#2e2e33' : '#E5E5E7')" class="transition-all duration-300"/>
-          <line x1="200" y1="200" x2="200" y2="320" stroke="#E5E5E7" stroke-width="2" [attr.stroke]="activeNode === 'deep' ? '#38bdf8' : (documentClassList().contains('dark') ? '#2e2e33' : '#E5E5E7')" class="transition-all duration-300"/>
-          
-          <!-- Central Pulse Router Node -->
-          <circle cx="200" cy="200" r="35" fill="#1D1D1F" [attr.fill]="documentClassList().contains('dark') ? '#ffffff' : '#1D1D1F'" class="animate-pulse"/>
-          <text x="200" y="204" fill="white" [attr.fill]="documentClassList().contains('dark') ? '#000000' : '#ffffff'" font-size="10" font-weight="bold" text-anchor="middle" font-family="monospace">CORE AI</text>
-
-          <!-- Flash Node -->
-          <g class="cursor-pointer" (mouseenter)="activeNode = 'flash'" (mouseleave)="activeNode = null">
-            <circle cx="80" cy="100" r="28" [attr.fill]="activeNode === 'flash' ? '#0071E3' : (documentClassList().contains('dark') ? '#27272a' : '#FFFFFF')" stroke="#E5E5E7" [attr.stroke]="documentClassList().contains('dark') ? '#3f3f46' : '#E5E5E7'" stroke-width="2" class="transition-all duration-300"/>
-            <text x="80" y="104" [attr.fill]="activeNode === 'flash' ? '#FFFFFF' : (documentClassList().contains('dark') ? '#ececf1' : '#1D1D1F')" font-size="9.5" font-weight="bold" text-anchor="middle" font-family="sans-serif">Flash</text>
-          </g>
-
-          <!-- Think Node -->
-          <g class="cursor-pointer" (mouseenter)="activeNode = 'think'" (mouseleave)="activeNode = null">
-            <circle cx="320" cy="100" r="28" [attr.fill]="activeNode === 'think' ? '#0071E3' : (documentClassList().contains('dark') ? '#27272a' : '#FFFFFF')" stroke="#E5E5E7" [attr.stroke]="documentClassList().contains('dark') ? '#3f3f46' : '#E5E5E7'" stroke-width="2" class="transition-all duration-300"/>
-            <text x="320" y="104" [attr.fill]="activeNode === 'think' ? '#FFFFFF' : (documentClassList().contains('dark') ? '#ececf1' : '#1D1D1F')" font-size="9.5" font-weight="bold" text-anchor="middle" font-family="sans-serif">Think</text>
-          </g>
-
-          <!-- Deep Node -->
-          <g class="cursor-pointer" (mouseenter)="activeNode = 'deep'" (mouseleave)="activeNode = null">
-            <circle cx="200" cy="320" r="28" [attr.fill]="activeNode === 'deep' ? '#0071E3' : (documentClassList().contains('dark') ? '#27272a' : '#FFFFFF')" stroke="#E5E5E7" [attr.stroke]="documentClassList().contains('dark') ? '#3f3f46' : '#E5E5E7'" stroke-width="2" class="transition-all duration-300"/>
-            <text x="200" y="324" [attr.fill]="activeNode === 'deep' ? '#FFFFFF' : (documentClassList().contains('dark') ? '#ececf1' : '#1D1D1F')" font-size="9.5" font-weight="bold" text-anchor="middle" font-family="sans-serif">Deep</text>
-          </g>
-        </svg>
-
-        <!-- Dynamic Overlay Label -->
-        <div class="absolute bottom-4 left-4 right-4 bg-white dark:bg-zinc-800 border border-border dark:border-zinc-700 rounded-xl p-3.5 text-center transition-all duration-300 shadow-sm"
-             *ngIf="activeNode">
-          <p class="text-[12px] font-semibold text-primary dark:text-zinc-200">
-            {{ activeNode === 'flash' ? 'Minimalism Flash aktif · Ideal untuk respons cepat harian' : activeNode === 'think' ? 'Minimalism Think aktif · Ideal untuk penalaran mendalam' : 'Minimalism Deep aktif · Ideal untuk riset komparatif lanjutan' }}
-          </p>
-        </div>
+        <img src="assets/images/Kecerdasan Terfokus - White.png" class="max-h-full max-w-full object-contain dark:hidden transition-all duration-300" alt="Kecerdasan Terfokus">
+        <img src="assets/images/Kecerdasan Terfokus -  Black.png" class="max-h-full max-w-full object-contain hidden dark:block transition-all duration-300" alt="Kecerdasan Terfokus">
       </div>
     </section>
 
