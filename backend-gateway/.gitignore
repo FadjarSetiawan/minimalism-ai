@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+dist/
+
+# Environment variables — NEVER COMMIT THESE
+.env
+.env.local
+.env.production
+.env.staging
+
+# Logs
+*.log
+logs/
+
+# Runtime
+db.json
+*.db
+
+# OS
+.DS_Store
+Thumbs.db

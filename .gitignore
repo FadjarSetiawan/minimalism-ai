@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+
+# Production build outputs
+dist/
+/frontend-client/dist/
+/backend-gateway/dist/
+
+# IDE / Editor configuration
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Angular cache and build output
+.angular/
+
+# Environments & Secrets
+.env
+.env.*
+!.env.example
+
+# Sandbox workspace where dynamic code is generated and compiled
+sandbox_workspace/
+
+# Local Mock Database file
+backend-gateway/db.json
+db.json
+
+# Log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
