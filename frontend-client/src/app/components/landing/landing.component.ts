@@ -230,55 +230,10 @@ interface Particle {
     <!-- 5. INTERACTIVE SECTION: PRIVACY SHIELD SANDBOX -->
     <section class="max-w-6xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center transition-colors duration-300">
       
-      <!-- Interactive Sandbox SVG Viewport (7 cols) -->
-      <div class="lg:col-span-7 bg-surface dark:bg-zinc-900/40 rounded-3xl border border-border dark:border-zinc-800 p-8 flex flex-col justify-between h-[380px] relative overflow-hidden transition-colors duration-300">
-        <div class="flex items-center justify-between z-10 select-none">
-          <span class="text-[10.5px] font-mono text-secondary dark:text-zinc-500">SIMULATOR_PEMBATAS_KEAMANAN</span>
-          <button (click)="togglePrivacy()" 
-                  class="bg-white dark:bg-zinc-900 border border-border dark:border-zinc-800 rounded-full px-4 py-1.5 text-[11px] font-medium hover:border-secondary dark:hover:border-zinc-500 cursor-pointer outline-none transition-all dark:text-zinc-300">
-            Ubah Mode: <span class="font-bold text-accent dark:text-[#38bdf8]">{{ privacyMode === 'secure' ? 'Tanpa Pelatihan (Aktif)' : 'Cloud Standar (Bocor)' }}</span>
-          </button>
-        </div>
-
-        <!-- SVG Sandbox Metaphor -->
-        <svg class="w-full h-48 z-10" viewBox="0 0 500 200">
-          <defs>
-            <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-              <path d="M 0 0 L 10 5 L 0 10 z" [attr.fill]="documentClassList().contains('dark') ? '#38bdf8' : '#0071E3'"/>
-            </marker>
-          </defs>
-
-          <!-- Cloud database destination -->
-          <rect x="380" y="60" width="80" height="80" rx="18" ry="18" fill="#FFFFFF" [attr.fill]="documentClassList().contains('dark') ? '#27272a' : '#FFFFFF'" stroke="#E5E5E7" [attr.stroke]="documentClassList().contains('dark') ? '#3f3f46' : '#E5E5E7'" stroke-width="2"/>
-          <text x="420" y="105" fill="#1D1D1F" [attr.fill]="documentClassList().contains('dark') ? '#ececf1' : '#1D1D1F'" font-size="10" font-weight="bold" text-anchor="middle" font-family="sans-serif">Database Pelatihan</text>
-
-          <!-- Input Origin -->
-          <circle cx="60" cy="100" r="24" fill="#1D1D1F" [attr.fill]="documentClassList().contains('dark') ? '#ffffff' : '#1D1D1F'"/>
-          <text x="60" y="103" fill="white" [attr.fill]="documentClassList().contains('dark') ? '#000000' : '#ffffff'" font-size="8.5" font-weight="bold" text-anchor="middle" font-family="monospace">Prompt</text>
-
-          <!-- Pathway connection lines -->
-          <path d="M 84,100 L 230,100" stroke="#E5E5E7" [attr.stroke]="documentClassList().contains('dark') ? '#33333b' : '#E5E5E7'" stroke-dasharray="4" stroke-width="2" class="transition-all duration-300"/>
-          
-          <!-- Dynamic Shield Guardrail -->
-          <g *ngIf="privacyMode === 'secure'" class="transition-all duration-500">
-            <line x1="250" y1="40" x2="250" y2="160" stroke="#0071E3" [attr.stroke]="documentClassList().contains('dark') ? '#38bdf8' : '#0071E3'" stroke-width="4" stroke-linecap="round"/>
-            <text x="250" y="30" fill="#0071E3" [attr.fill]="documentClassList().contains('dark') ? '#38bdf8' : '#0071E3'" font-size="9" font-weight="bold" text-anchor="middle" font-family="sans-serif">Pelindung Tanpa Data</text>
-            <!-- Bouncing return arrow -->
-            <path d="M 230,100 L 150,60" stroke="#0071E3" [attr.stroke]="documentClassList().contains('dark') ? '#38bdf8' : '#0071E3'" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
-            <text x="190" y="50" fill="#0071E3" [attr.fill]="documentClassList().contains('dark') ? '#38bdf8' : '#0071E3'" font-size="8" font-family="sans-serif">Tetap Pribadi</text>
-          </g>
-
-          <g *ngIf="privacyMode === 'leaked'" class="transition-all duration-500">
-            <line x1="230" y1="100" x2="380" y2="100" stroke="#FF3B30" stroke-width="2" stroke-dasharray="4"/>
-            <text x="300" y="90" fill="#FF3B30" font-size="8.5" font-family="sans-serif">Bocor untuk Pelatihan</text>
-          </g>
-        </svg>
-
-        <div class="bg-white dark:bg-zinc-950 border border-border dark:border-zinc-800 rounded-2xl p-3.5 z-10 transition-colors duration-300 font-sans">
-          <p class="text-[12.5px] text-secondary dark:text-zinc-400 leading-relaxed">
-            {{ privacyMode === 'secure' ? '🔒 Prompt Anda diproses dengan aman. Model dilarang menyimpan atau melatih data dari konten Anda.' : '⚠️ Rute AI standar mungkin menggunakan data pribadi Anda untuk melatih model sumber terbuka mendatang.' }}
-          </p>
-        </div>
+      <!-- PRODUCT IMAGE MOCKUP DISPLAY -->
+      <div class="lg:col-span-7 flex items-center justify-center relative transition-all duration-300 select-none">
+        <img src="assets/images/Privasi Mutlak - White.png" class="w-full max-w-[520px] h-auto object-contain dark:hidden transition-all duration-300 rounded-3xl" alt="Privasi Mutlak">
+        <img src="assets/images/Privasi Mutlak - Black.png" class="w-full max-w-[520px] h-auto object-contain hidden dark:block transition-all duration-300 rounded-3xl" alt="Privasi Mutlak">
       </div>
 
       <!-- Right Description Side (5 cols) -->
