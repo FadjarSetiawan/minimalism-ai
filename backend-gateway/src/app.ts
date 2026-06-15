@@ -83,6 +83,11 @@ app.post('/api/workspace/clear', clearWorkspace);
 app.post('/api/payment/charge', createPayment);
 app.post('/api/payment/notify', notifyPaymentCompleted);
 
-app.listen(PORT, () => {
-  console.log(`Minimalism AI V2.0 Gateway running on port ${PORT}`);
-});
+// For local execution
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`Minimalism AI V2.0 Gateway running on port ${PORT}`);
+  });
+}
+
+export default app;

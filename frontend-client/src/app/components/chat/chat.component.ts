@@ -6,6 +6,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { AuthService } from '../../services/auth.service';
 import { AiService } from '../../services/ai.service';
 import { ThemeService } from '../../services/theme.service';
+import { getApiUrl } from '../../core/api-config';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -654,7 +655,7 @@ export class ChatComponent implements OnInit, OnDestroy {
 
   getSafePreviewUrl(): SafeResourceUrl {
     // Add timestamp + random to bust both browser and server cache
-    const url = `http://localhost:3000/sandbox/src/index.html?t=${this.previewKey}&r=${Date.now()}`;
+    const url = `${getApiUrl()}/sandbox/src/index.html?t=${this.previewKey}&r=${Date.now()}`;
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
@@ -1655,7 +1656,7 @@ export class ChatComponent implements OnInit, OnDestroy {
       }
 
       const token = localStorage.getItem('supabase_token') || 'mock_jwt_dev_user_id';
-      const url = `http://localhost:3000/api/workspace/stream-execute?command=${encodeURIComponent(command)}&token=${encodeURIComponent(token)}`;
+      const url = `${getApiUrl()}/api/workspace/stream-execute?command=${encodeURIComponent(command)}&token=${encodeURIComponent(token)}`;
       
       const eventSource = new EventSource(url);
 

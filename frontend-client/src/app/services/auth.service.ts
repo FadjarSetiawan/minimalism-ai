@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+import { getApiUrl } from '../core/api-config';
+
 export interface UserLedger {
   dailyPromptsUsed: number;
   imageCoinsLeft: number;
@@ -17,7 +19,7 @@ export interface UserProfile {
   providedIn: 'root'
 })
 export class AuthService {
-  private baseUrl = 'http://localhost:3000/api';
+  private baseUrl = `${getApiUrl()}/api`;
   private user: UserProfile | null = null;
 
   constructor() {

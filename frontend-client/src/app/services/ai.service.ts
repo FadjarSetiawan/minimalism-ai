@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AuthService } from './auth.service';
 
+import { getApiUrl } from '../core/api-config';
+
 export interface ChatResponse {
   success: boolean;
   reply?: string;
@@ -13,7 +15,7 @@ export interface ChatResponse {
   providedIn: 'root'
 })
 export class AiService {
-  private baseUrl = 'http://localhost:3000/api';
+  private baseUrl = `${getApiUrl()}/api`;
 
   constructor(private authService: AuthService) {}
 
