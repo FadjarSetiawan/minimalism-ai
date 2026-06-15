@@ -1,5 +1,6 @@
 {
   "cleanUrls": true,
+  "outputDirectory": "dist/frontend-client/browser",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
