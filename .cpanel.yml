@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home2/kaizorat/ai.minimalism.web.id
+    - mkdir -p $DEPLOYPATH
+    - /bin/cp -R * $DEPLOYPATH/
+    - touch $DEPLOYPATH/tmp/restart.txt
