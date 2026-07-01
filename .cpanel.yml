@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home2/kaizorat/ai.minimalism.web.id
+    - mkdir -p $DEPLOYPATH
+    # Copy file hasil build frontend dari repository ke direktori public web
+    - rsync -a frontend-client/dist/frontend-client/browser/ $DEPLOYPATH/

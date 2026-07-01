@@ -2,8 +2,8 @@
 node_modules/
 
 # Production build outputs
-dist/
-/frontend-client/dist/
+# dist/
+# /frontend-client/dist/
 /backend-gateway/dist/
 
 # IDE / Editor configuration
