@@ -1,7 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home2/kaizorat/ai.minimalism.web.id
-    - mkdir -p $DEPLOYPATH
-    - rsync -a --exclude 'node_modules' --exclude '.git' ./ $DEPLOYPATH/
-    - touch $DEPLOYPATH/tmp/restart.txt
